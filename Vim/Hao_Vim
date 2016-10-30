@@ -1,0 +1,105 @@
+Hello World! This is a test!  
+This is just a test line for everything.
+	
+esc -> Enter COMMAND Mode
+
+h -> Move cursor left 
+j -> Move cursor down
+k -> Move cursor up
+l -> Move cursor right
+H -> Jump to the top of the screen
+L -> Jump to the bottom of the screen
+M -> Jump to the middle of the screen
+$ -> Move cursor to end of line
+0 -> Move cursor to beginning of line
+G -> Jump to end of document
+1G -> Jump to beginning of file (gg)
+50G -> Jump to line 50
+% -> Jump to matching bracket
+) -> Jump forward one sentence
+( -> Jump backward one sentence
+} -> Jump forward one paragraph
+{ -> Jump backward one paragraph
+Ctrl-b -> Move back one full screen
+Ctrl-f -> Move forward one full screen
+Ctrl-d -> Move forward 1/2 screen
+Ctrl-u -> Move back 1/2 screen
+
+mx -> Set mark x at the current cursor position
+'x -> Jump to the beginning of the line of mark x
+`x -> Jump to the cursor position of mark x
+u -> Undo last change
+Ctrl-r -> Redo change
+
+i -> Insert before char
+I -> Insert at beginning of line
+a -> Append after current char
+A -> Append at end of line
+o -> Open a new line after current line
+O -> Open a new line before current line 
+r -> Replace a single character
+R -> Replace all following characters
+c -> Change whatever we specify (using a modifier)
+C -> Change to the end of a line
+~ -> Change case of character
+
+w -> Navigate cursor to next word (word is delineated by punctuation)
+W -> Navigate cursor to next word (word is delineated by space)
+b -> Navigate cursor to previous word (word is delineated by punctuation)
+B -> Navigate cursor to previous word (word is delineated by space)
+e -> Navigate to the next end of word (word is delineated by punctuation)
+E -> Navigate to the next end of word (word is delineated by space)
+
+x -> Delete a single character at the cursor 
+X -> Delete a single character before the cursor
+d -> Delete whatever we specify (using a modifier) (and cuts it)
+D -> Delete to the end of a line (and cut it)
+
+y -> Yank whatever we specify (using a modifier)
+Y -> Yank the entire current line
+p -> Paste from the vim buffer after the current cursor position
+P -> Paste from the vim buffer before the current cursor position
+ 
+/ -> Search forward (Search for "//", use "/\/\/")
+? -> Search backward
+     <Enter> Submit search query
+     n -> Next search result
+     N -> Previous search result
+:%s/foo/bar/gc -> Change each 'foo' to 'bar', and ask for confirmation first
+
+>> -> Indent line by shiftwidth spaces
+<< -> Deindent line by shiftwidth spaces
+5>> -> Indent 5 lines
+:4,8> -> Indent lines 4 to 8, inclusive
+:set autoindent -> Automatically indent
+
+Esc  Ctrl-v  up/down keys  Shift-i  #  Esc  Esc -> Comment out blocks
+Esc  Ctrl-v  up/down keys  d or x -> Uncomment blocks
+
+10 l -> Move cursor right 10 times 
+dd -> D
+
+:start,end/query/replace/<flags> -> Search and replace
+:%/query/replace/g -> Search and replace throughout the entire document
+
+:split -> Split window horizontally
+:vsplit -> Split window vertically
+Ctrl-w-j -> Move to downward window 
+Ctrl-w-c -> Close the window
+
+:set nu -> Display line numbers
+:set rnu -> Display relative line numbers
+:set nonumber -> Hide line numbers
+:set colorcolumn=X -> Draw a column
+:set ruler -> Show coordinate info
+:set tabstop=X -> Set tab spaces
+:colors <theme> -> Set a color theme
+
+:put =strftime(\"%c\") -> insert time
+
+:e -> Open a file
+:E -> List files in the current folder
+:q -> Quit vim
+:q! -> Quit vim (ignoring unsaved edits)
+:w -> Save document
+:wq -> Save document and quit vim
