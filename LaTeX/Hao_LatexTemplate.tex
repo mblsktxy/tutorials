@@ -1,0 +1,512 @@
+\documentclass[12pt]{article}
+\pagestyle{plain}
+
+%\usepackage{fullpage}
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
+% for use of \mathbb{•}
+\usepackage{amsfonts} 
+% for use of \includegraphics[scale=•]{•}
+\usepackage{graphicx}
+
+\def\eq1{$y=\frac{x}{3x^2+x+1}$}
+\def\labelaxes{Remember to include a scale and label your axes.}
+\newcommand{\inftyint}{\int_{-\infty}^{+\infty}}
+\newcommand{\intwrtx}[1]{\int_{-\infty}^{+\infty} #1 \,dx}
+\newcommand{\intwrt}[2]{\int_{-\infty}^{+\infty} #2 \,d #1}
+
+\begin{document}
+
+\tableofcontents
+
+\title{My Practice \LaTeX\ Document}
+\author{Hao Zhou}
+\date{\today}
+\maketitle
+
+This is my first Latex document. \\
+
+\bigbreak 
+\noindent
+\begin{Large}\textbf{Producing Simple Documents:}\end{Large} 
+\bigbreak
+
+\noindent
+\begin{large}\textit{Bland Spaces and Carriage Returns:}\end{large}
+
+This is 
+	a 
+		silly
+  example	of	a
+file with many spaces.
+
+					This is the beginning
+of a new paragraph. \\
+
+\noindent
+\begin{large}\textit{Quotation Marks and Dashes:}\end{large}
+
+``I regard computer typesetting as being reasonably `straightforward'\,'' Hao said.
+
+on pages 155--219.
+
+first I put my head on the top of the gate---then I stand on my head. \bigbreak
+
+\noindent
+\begin{large}\textit{Font Families:}\end{large}
+
+\textrm{Roman is normally the default family and includes \textup{upright}, \textit{italic}, \textsl{slanted}, \textsc{small caps} and \textbf{boldface} fonts of various sizes.}
+
+\textsf{There is a sans serif family with \textup{upright}, \textit{italic}, \textsl{slanted}, \textsc{small caps} and \textbf{boldface} fonts of various sizes.}
+
+\texttt{There is a typewriter family with \textup{upright}, \textit{italic}, \textsl{slanted}, \textsc{small caps} and \textbf{boldface} fonts of various sizes.} \\
+
+\noindent
+\begin{large}\textit{Size of Fonts:}\end{large}
+
+\begin{tiny}This text is tiny.\end{tiny}
+
+\begin{scriptsize}This text is scriptsize.\end{scriptsize}
+
+\begin{footnotesize}This text is footnotesize.\end{footnotesize}
+
+\begin{small}This text is small.\end{small}
+
+\begin{normalsize}This text is normalsize.\end{normalsize}
+
+\begin{large}This text is large.\end{large}
+
+\begin{Large}This text is Large.\end{Large}
+
+\begin{LARGE}This text is LARGE.\end{LARGE}
+
+\begin{huge}This text is huge.\end{huge}
+
+\begin{Huge}This text is Huge.\end{Huge} \\
+
+\noindent
+\begin{large}\textit{Shape of Fonts:}\end{large}
+
+\textup{The \LaTeX\ command \texttt{\textup{\char92}}textup\{\textit{text}\} typesets the specified text with an upright shape: this is normally the default shape.}
+
+\textit{The \LaTeX\ command \texttt{\textup{\char92}}\textup{textit}\{text\} typesets the specified text with an italic shape.}
+
+\textsl{The \LaTeX\ command \texttt{\textup{\char92}}\textup{textsl}\{\textit{text}\} typesets the specified text with a slanted shape: slanted text is similar to italic.} \\
+
+\noindent
+\begin{large}\textit{Series of Fonts:}\end{large}
+
+\textmd{The \LaTeX\ command \texttt{\textup{\char92}}textmd\{\textit{text}\} typesets the specified text with a medium series font.}
+
+\textbf{The \LaTeX\ command \texttt{\textup{\char92}}\textmd{textbf\{\textit{text}\}} typesets the specified text with a boldface series font.} \\
+
+\noindent
+\begin{large}\textit{Accents:}\end{large}
+
+Se\'{a}n \'{O} Cinn\'{e}ide
+
+alg\`{e}bre
+
+h\^{o}te
+
+Universit\"{a}t
+
+ma\~{n}ana \\
+
+\noindent
+\begin{large}\textit{Active Characters:}\end{large}
+
+\# \$ \% \& \_ \{ \} \texttt{\char92} \char94 \char126 \\
+
+\bigbreak
+\noindent
+\begin{Large}\textbf{Producing Mathematical Formulae:}\end{Large}
+\bigbreak
+
+\noindent
+\begin{large}\textit{Mathematics Mode:}\end{large}
+
+Suppose we are given a rectangle with side lengths $(x+1)$ and $(x+3)$. Then the equation $A=x^2+4x+3$ represents the area of the rectangle.
+
+Suppose we are given a rectangle with side lengths $(x+1)$ and $(x+3)$. Then the equation $$A=x^2+4x+3$$ represents the area of the rectangle. \\
+
+\noindent
+\begin{large}\textit{Superscripts and Subscripts:}\end{large}
+
+\[ 2x^3, 2x^{34}, 2x^{3x+4}, 2x^{3x^4+5} \]
+\[ x_1, x_{12}, {{x_1}_2}_3, 
+   R_i{}^j{}_{kl} = g^{jm} R_{imkl}
+   = - g^{jm} R_{mikl} = - R^j{}_{jkl} \] \\
+
+\noindent
+\begin{large}\textit{Special Letters:}\end{large}
+
+\[ \pi, \alpha, A = \pi r^2 \]
+
+The set of Natural numbers is denoted by $\mathbb{N}$. The set of Integers is denoted by $\mathbb{Z}$. The set of Real numbers is denoted by $\mathbb{R}$. \\
+
+\noindent
+\begin{large}\textit{Changing Fonts in Mathematics Mode:}\end{large}
+
+Let $\mathbf{u}$,$\mathbf{v}$ and $\mathbf{w}$ be three vectors in ${\mathbf R}^3$. The volume $V$ of the parallelepiped with corners at the points $\mathbf{0}$, $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{u}+\mathbf{v}$, $\mathbf{u}+\mathbf{w}$, $\mathbf{v}+\mathbf{w}$ and $\mathbf{u}+\mathbf{v}+\mathbf{w}$ is given by the formula
+\[ V = (\mathbf{u} \times \mathbf{v}) \cdot \mathbf{w}.\]
+
+$\cal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ \\
+
+\noindent
+\begin{large}\textit{Standard Functions:}\end{large}
+
+\[ \cos(\theta + \phi) = \cos \theta \cos \phi - \sin \theta \sin \phi \]
+
+$\mathrm{cosec} A$ vs $cosec A$
+
+\[ \log_5 x, \ln x \]
+\[ \sqrt{2}, \sqrt[3]{2}, \sqrt{x^2+y^2}, \sqrt{1+\sqrt{x}} \]
+\[ \frac{x}{x^2+x+1}, \frac{\sqrt{x+1}}{\sqrt{x-1}},
+   \frac{1}{1+\frac{1}{x}}, \sqrt{\frac{x}{x^2+x+1}} \]
+
+About ${\frac{2}{3}}$ of the glass is full.
+
+About $\displaystyle{\frac{2}{3}}$ of the glass is full. \\
+
+\noindent
+\begin{large}\textit{Text Embedded in Displayed Equations:}\end{large}
+
+\[ M^\bot = \{ f \in V' : f(m) = 0 \mbox{ for all } m \in M \}.\]
+\[ M^\bot = \{ f \in V' : f(m) = 0 \mbox{for all} m \in M \}.\] \\
+
+\noindent
+\begin{large}\textit{Ellipsis (i.e.,`three dots'):}\end{large}
+
+\[ f(x_1, x_2, \ldots, x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 \]
+
+\noindent
+\begin{large}\textit{Accents in Mathematics Mode:}\end{large}
+
+$\underline{a}, \overline{a}, \hat{a}, \check{a}, \tilde{a}, \acute{a}, \grave{a}, \dot{a}, \ddot{a}, \breve{a}, \bar{a}, \vec{a}$ \\
+
+\noindent
+\begin{large}\textit{Brackets and Norms:}\end{large}
+
+\[ (x+1), 3[2+(x+1)], \{a, b, c\}, \$12.55, 
+   3(\frac{2}{5}), 3\left(\frac{2}{5}\right), 
+   3\left[\frac{2}{5}\right],3\left\{\frac{2}{5}\right\},
+   |\frac{x}{x+1}|, \left| \frac{x}{x+1} \right|,
+   \left\{x^2\right\}, \left\{x^2\right. \]
+
+Let $X$ be a Banach space and let $f \colon B \to \textbf{R}$ be a bounded linear functional on $X$. The \textit{norm} of $f$, denoted by $\|f\|$, is defined by
+\[ \|f\| = \inf \{ K \in [0,+\infty) :
+			|f(x)| \leq K \|x\| \mbox{ for all } x \in X \}.\]
+			
+\[ \left| 4 x^3 + \left( x + \frac{42}{1+x^4} \right) \right|\]
+
+\[ \left. \frac{du}{dx} \right|_{x = 0}\] \\
+
+\noindent
+\begin{large}\textit{Multiline Formulae:}\end{large}
+
+\begin{eqnarray}
+x^2 - 9 & = & x + 3 \\
+4x^2 & = & 12 \\
+x^3 & = & 3 \\
+x & \approx & \pm 1.372
+\end{eqnarray}
+\begin{eqnarray*}
+x^2 - 9 & = & x + 3 \\
+4x^2 & = & 12 \\
+x^3 & = & 3 \\
+x & \approx & \pm 1.372
+\end{eqnarray*}
+
+Hao says that
+\begin{equation}
+a+b=c
+\label{eq:abc}
+\end{equation}
+is a philosophical theorem.
+
+Equation (\ref{eq:abc}) is Hao's philosophical theorem. \\
+
+\noindent
+\begin{large}\textit{Matrices and other arrays:}\end{large}
+
+The \emph{characteristic polynomial} $\chi(\lambda)$ of the $3 \times 3$ matrix
+\[ \left( \begin{array}{ccc}
+a & b & c \\
+d & e & f \\
+g & h & i \end{array} \right)\]
+is given by the formula
+\[ \chi(\lambda) = \left| \begin{array}{ccc}
+\lambda - a & -b & -c \\
+-d & \lambda - e & -f \\
+-g & -h & \lambda - i \end{array} \right|.\]
+
+\[ \begin{array}{lcr}
+\mbox{First number} & x & 8 \\
+\mbox{Second number} & y & 15 \\
+\mbox{Sum} & x + y & 23 \\
+\mbox{Difference} & x - y & -7 \\
+\mbox{Product} & xy & 120 \end{array}\]
+
+\[ |x| = \left\{ \begin{array}{ll}
+		x & \mbox{if $x \geq 0$}; \\
+	   -x & \mbox{if $x < 0$}.\end{array} \right. \] \\
+	   
+\noindent	   
+\begin{large}\textit{Derivatives, Limits, Sums and Intergrals:}\end{large}
+
+The function $f(x)=(x-3)^2+\frac{1}{2}$ has domain $\mathrm{D}_f:(-\infty,\infty)$ and range $\mathrm{R}_f:\left[\frac{1}{2},\infty\right)$.
+
+\[ \lim \limits_{x \to a^-} f(x),
+   \lim_{x \to a} \frac{f(x)-f(a)}{x-a} = f'(a),
+   \lim_{x \to +\infty} \frac{3x^2 + 7x^3}{x^2 + 5x^4} = 3 \]
+\[ \vec{v} = v_1 \vec{i} + v_2\vec{j}
+   = \langle v_1, v_2 \rangle \]
+\[ \frac{\partial u}{\partial t}
+	= \frac{\partial^2 u}{\partial x^2}
+	+ \frac{\partial^2 u}{\partial y^2}
+	+ \frac{\partial^2 u}{\partial z^2} \]
+\[ \sum_{k = 1}^n k^2 = \frac{1}{2} n (n+1),
+   \sum \limits_{n = 1}^{\infty} ar^n = a + ar + ar^2 + \cdots \]
+\[ \int_a^b, \int \limits_a^b \]
+\[ \int \sin x \, dx = -\cos x + C \]
+\[ \int_a^b x^2 \,dx
+   = \left. \frac{x^3}{3} \right|_a^b
+   = \frac{b^3}{3} - \frac{a^3}{3} \]
+\[ \int_a^b f(x) \,dx
+   = \lim_{x \to \infty} \sum_{k=1}^{n}f(x_k) \cdot \Delta x \]
+\[ \int_0^1 \! \int_0^1 x^2 y^2\,dx\,dy\]
+\[ \int \!\!\! \int_D f(x,y)\,dx\,dy \] \\
+
+\noindent
+\begin{large}\textit{A Complicated Example:}\end{large}
+
+In non-relativistic wave mechanics, the wave function $\psi(\mathbf{r},t)$ of a particle satisfies the \textit{Schr\"{o}dinger Wave Equation}
+\[ i\hbar\frac{\partial \psi}{\partial t}
+  = \frac{-\hbar^2}{2m} \left(
+    \frac{\partial^2}{\partial x^2}
+    + \frac{\partial^2}{\partial y^2}
+    + \frac{\partial^2}{\partial z^2} \right)
+    \psi + V \psi.\]
+It is customary to normalize the wave equation by demanding that 
+\[ \int \!\!\! \int \!\!\! \int_{\textbf{R}^3}
+	\left| \psi(\mathbf{r},0) \right|^2\,dx\,dy\,dz = 1.\]
+A simple calculation using the Schr\"{o}dinger wave equation shows that
+\[ \frac{d}{dt} \int \!\!\! \int \!\!\! \int_{\textbf{R}^3}
+	\left| \psi(\mathbf{r},t) \right|^2\,dx\,dy\,dz = 0,\]
+and hence 
+\[ \int \!\!\! \int \!\!\! \int_{\textbf{R}^3}
+	\left| \psi(\mathbf{r},t) \right|^2\,dx\,dy\,dz = 1\]
+for all times~$t$. If we normalize the wave function in this way then, for any (measurable) subset~$V$ of $\textbf{R}^3$ and time~$t$,
+\[ \int \!\!\! \int \!\!\! \int_V
+	\left| \psi(\mathbf{r},t) \right|^2\,dx\,dy\,dz\]
+represents the probability that the particle is to be found within the region~$V$ at time~$t$. \\
+
+\bigbreak
+\noindent
+\begin{Large}\textbf{Further Features:}\end{Large} 
+\bigbreak
+
+\noindent
+\begin{large}\textit{Sections:}\end{large}
+
+\section{Linear Functions}
+\subsection{Slope-Intercept Form}
+The slope-intercept form of a linear function is given by $y=ax+b$.
+\subsection{Standard From}
+\subsection{Point-Slope Form}
+\section{Quadratic Functions}
+\subsection{Vertex Form}
+\subsection{Standard Form}
+\subsection{Factored Form}
+\pagebreak
+
+\noindent
+\begin{large}\textit{Producing White Space:}\end{large}
+
+This is some paragraph of some text. It is separated from the following paragraph by a vertical skip of 10 millimetres.
+
+\vspace{10 mm}
+This is the following paragraph.
+
+It is sometimes nexessary to tell \LaTeX\ not to break at a particular blank space. The special character used for this purpose is \char126. For example: the length~$l$ of the rod. \\
+
+\noindent
+\begin{large}\textit{Lists:}\end{large}
+
+A \emph{matric space} $(X,d)$ consists of a set~$X$ on which is defined a \emph{distance function} which assigns to each pair of points of $X$ a distance between them, and which satisfies the following four axioms:
+\begin{enumerate}
+\item
+$d(x,y) \geq 0$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,y) = d(y,x)$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,z) \leq d(x,y) + d(y,z)$ for all points $x$, $y$ and $z$ of $X$;
+\item
+$d(x,y) = 0$ if and only if the points $x$ and $y$ coincide.
+\end{enumerate}
+
+A \emph{matric space} $(X,d)$ consists of a set~$X$ on which is defined a \emph{distance function} which assigns to each pair of points of $X$ a distance between them, and which satisfies the following four axioms:
+\begin{itemize}
+\item
+$d(x,y) \geq 0$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,y) = d(y,x)$ for all points $x$ and $y$ of $X$;
+\item
+$d(x,z) \leq d(x,y) + d(y,z)$ for all points $x$, $y$ and $z$ of $X$;
+\item
+$d(x,y) = 0$ if and only if the points $x$ and $y$ coincide.
+\end{itemize}
+
+We now list the definitions of \emph{open ball}, \emph{open set}, \emph{closed set} in a metric space.
+\begin{description}
+\item[open ball]
+The \emph{open ball} of radius~$r$ about any point~$x$ is the set of all points of the metric space whose distance from $x$ is strictly less than $r$;
+\item[open set]
+A subset of a metric space is an \emph{open set} if, giben any point of the set, some open ball of sufficiently small radius about that point is contained wholly within the set;
+\item[closet set]
+A subset of a metric space is an \emph{closed set} if its complement is an open set. 
+\end{description}
+
+\begin{enumerate}
+\item[Commutative] $a+b=b+a$
+\item[Associative] $a+(b+c)=(a+b)+c$
+\item[Distributive] $a(b+c)=ab+bc$ \\
+\end{enumerate}
+
+\noindent
+\begin{large}\textit{Displayed Quotations:}\end{large}
+
+Isaac Newton discovered the basic techniques of the differential and integral calculus, and applied them in the study of many problems in mathematical physics. His main mathematical works are the \emph{Principia} and the \emph{Optics}. He summed up his own estimate of his work as follows:
+\begin{quote}
+I do not know what I may appear to the world; but to myself I seem to have been only like a boy, playing on the sea-shore, and diverting myself, in now and then finding a smoother pebble, or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.
+\end{quote}
+In later years Newton became embroiled in a bitter priority dispute with Leibniz over the discovery of the basic techniques of calculus. \\
+
+\noindent
+\begin{large}\textit{Alignment Format:}\end{large}
+
+\begin{center}This is entered.\end{center}
+\begin{flushleft}This is left-justified.\end{flushleft}
+\begin{flushright}This is right-justified.\end{flushright} 
+
+\noindent
+\begin{large}\textit{Tables:}\end{large}
+
+The first five International Congresses of Mathematicians were held in the following cities:
+\begin{quote}
+\begin{tabular}{lll}
+Chicago&U.S.A.&1893\\
+Z\"{u}rich&Switzerland&1897\\
+Paris&France&1900\\
+Heidelberg&Germany&1904\\
+Rome&Italy&1908
+\end{tabular}
+\end{quote}
+
+The group of permutations of a set of $n$~elements has order $n!$, where $n!$, the factorial of $n$, is the product of all integers between $1$ and $n$. The following table lists the values of the factorial of each integer~$n$ between 1 and 10:
+\begin{quote}
+\begin{tabular}{|r|r|}
+\hline
+$n$&$n!$\\
+\hline
+1&1\\
+2&2\\
+3&6\\
+4&24\\
+5&120\\
+6&720\\
+7&5040\\
+8&40320\\
+9&362880\\
+10&3628800\\
+\hline
+\end{tabular}
+\end{quote}
+Note how rapidly the value of $n!$ increases with $n$. \\
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$x$ & 1 & 2 & 3 & 4 & 5 \\ 
+\hline
+$f(x)$ & 10 & 11 & 12 & 13 & 14 \\ 
+\hline
+\end{tabular} \\
+
+\begin{center}
+\begin{tabular}{|c||c|c|} 
+\hline
+& A & B \\ \hline \hline
+Foo &
+\begin{tabular}{c} 1 \\ 2 \\ 3 \\ 4 \\
+\end{tabular} &
+\begin{tabular}{c} 2 \\ 5 \\ 9 \\ 8 \\
+\end{tabular} \\ \hline
+Bar &
+\begin{tabular}{c} 1 \\ 2 \\ 3 \\ 4 \\
+\end{tabular} &
+\begin{tabular}{c} 31 \\ 23 \\ 16 \\ 42 \\
+\end{tabular} \\ \hline
+\end{tabular}
+\end{center}
+
+\[ \left. \begin{array}{c|c||c}
+    x_{11} & x_{12} & \ldots \\
+    \hline
+	x_{21} & x_{22} & \ldots \\
+	\hline\hline
+	\vdots & \vdots & \ddots
+	\end{array} \right) \]
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|r||l|}
+\hline
+$x$ & $x^2$ \\
+\hline \hline
+1 & 1 \\ \hline
+2 & 4 \\ \cline{1-1}
+3 & 9 \\ \hline
+4 & 16 \\ \hline
+\multicolumn{2}{|c|}{$\cdots$}\\ \hline
+\end{tabular}
+\caption{Value of $x^2$}
+\label{tab:square}
+\end{table}
+Table \ref{tab:square} is of nonsense ... \\
+
+\noindent
+\begin{large}\textit{Graphics:}\end{large}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[height=0.5in, angle = 30]{pku.png}
+\caption{Cool!}
+\label{fig:pku}
+\end{figure}
+Figure \ref{fig:pku} shows you Hao's feeling. \\
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{cc}
+PKU1 & PKU2 \\
+\includegraphics[width=0.3\textwidth]{pku.png} &
+\includegraphics[width=0.3\textwidth]{pku.png} \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\noindent
+\begin{large}\textit{Defining your own Control Sequences:}\end{large}
+
+Graph \eq1.
+
+Identify the asymptotes of for the graph of \eq1. 
+
+\labelaxes
+
+\[ \inftyint f(x)\,dx \]
+\[ \intwrtx{f(x)} \]
+\[ \intwrt{y}{f(y)} \]
+
+\end{document}
